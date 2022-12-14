@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h6 class="text-center mt-2"></h6>
+                    <div class="jumbotron text-center">
+                        <div>
+                        <h1 class="display-4">Deep Learning</h1><br>
+                        <!-- <p class="lead">Face Mask Detection App</p> -->
+                        <p>Deep learning (DL) adalah salah satu bagian dari Machine Learning (ML)
+                            dimana merupakan salah satu fungsi kecerdasan buatan yang menggunakan
+                            aktivitas otak manusia sebagai simulasi untuk pengolahan data atau menciptakan
+                            model untuk proses pengambilan keputusan. Saat ini DL merupakan salah satu
+                            bidang ML yang sangat populer karena kemampuannya dalam memodelkan data
+                            yang kompleks seperti pada citra atau bahkan audio. DL dibangun dengan layerlayer, dimana algortima DL yang paling terkenal antara lain Recurrent Neural
+                            Networks (RNN), Multilayer Perceptrons (MLP), dan Convolutional Neural
+                            Networks (CNN).
+                            </p>
+                        <hr class="my-4">
+                        <h1 class="display-4">CNN</h1><br>
+                        <!-- <p class="lead">Face Mask Detection App</p> -->
+                        <p>Convolutions Neural Network (CNN) adalah satu dari beberapa algoritma
+                            deep learning (DL) yang sangat populer dalam permasalahan klasifikasi, terutama
+                            pada citra. Algoritma ini sering di implementasikan sebagai pengenalan objek pada
+                            citra. CNN adalah evolusi dari multilayer perceptrons (MLP) yang ditujukan untuk
+                            memproses data berdimensi 2D. Metode CNN telah diperkenalkan ke banyak
+                            komputer vision, seperti objek deteksi, verifikasi wajah, segmentasi semantik,
+                            klasifikasi gambar, hingga anotasi gambar (Adi et al., 2022).</p>
+                        <hr class="my-4">
+                        <h1 class="display-4">Dense201</h1><br>
+                        <!-- <p class="lead">Face Mask Detection App</p> -->
+                        <p>Dense Convolutional Network (DenseNet) menghubungkan setiap layer ke setiap layer lainnya 
+                            dengan cara feed-forward. Mereka meringankan masalah vanishing-gradient, memperkuat propagasi fitur, 
+                            mendorong penggunaan kembali fitur, dan secara substansial mengurangi jumlah parameter.
+
+                            DenseNet bekerja berdasarkan gagasan bahwa jaringan konvolusional dapat jauh lebih dalam, 
+                            lebih akurat, dan efisien untuk dilatih jika mereka memiliki koneksi yang lebih pendek antara lapisan 
+                            yang dekat dengan input dan yang dekat dengan output.</p>
+                        <!-- <a class="btn btn-primary btn-lg" href="/" role="button">About</a> -->
+                      </div>
+
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div>
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <!-- Main row -->
+        <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+</div>
+<script>
+    $('#fileupload').submit(function (evnt) {
+        if ($('#name').val().length <= 0) {
+            $('#name').attr('style', 'border-color:red');
+            evnt.preventDefault();
+        }
+        if ($('#content').val().length <= 0) {
+            $('#content').attr('style', 'border-color:red');
+            evnt.preventDefault();
+        }
+    });
+
+</script>
+{% endblock %}

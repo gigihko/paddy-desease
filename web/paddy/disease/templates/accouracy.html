@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center"><b>
+                            Paddy Desease Classification App - Accouracy
+                        </b></h2>
+                        <h6 class="text-center mt-2">Build with Django, CNN and Dense201</h6>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-6">
+                    <div class="container-fluid">
+                        <h6 class="text-center mt-2">Accouracy</h6>
+                        <div class="mb-3 d-flex justify-content-center">
+                            <img src="{% static 'images/training accouracy.png' %}">
+
+                        </div>
+                        <div class="mb-3 d-flex justify-content-center">
+                            <img src="{% static 'images/training loss.png' %}">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h6 class="text-center mt-2"></h6>
+                    <div class="container-fluid">
+                        <h6 class="text-center mt-2">Classification Report</h6>
+                        <div class="mb-3 d-flex justify-content-center">
+                            <img src="{% static 'images/classification report.png' %} " width="80%">
+
+                        </div>
+                        <div class="mb-3 d-flex justify-content-center">
+                            <img src="{% static 'images/matrix.png' %}" width="60%">
+
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <!-- Main row -->
+        <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+</div>
+<script>
+    $('#fileupload').submit(function (evnt) {
+        if ($('#name').val().length <= 0) {
+            $('#name').attr('style', 'border-color:red');
+            evnt.preventDefault();
+        }
+        if ($('#content').val().length <= 0) {
+            $('#content').attr('style', 'border-color:red');
+            evnt.preventDefault();
+        }
+    });
+
+</script>
+{% endblock %}

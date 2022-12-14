@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h1 class="text-center"><b>
+                        Paddy Desease Classification App  - DATASET
+                        </b></h1>
+                        <h6 class="text-center mt-2">Build with Django, CNN and Dense201</h6>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="container-fluid">
+                        <div class="mb-5 d-flex justify-content-center">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Classification</th>
+                                    <th scope="col">Train</th>
+                                    <th scope="col">Validation</th>
+                                    <th scope="col">Test</th>
+                                    <th scope="col">Sample</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Leaf smut</td>
+                                    <td>{{ tleaf }}</td>
+                                    <td>{{ vleaf }}</td>
+                                    <td>{{ teleaf }}</td>
+                                    <td><img src="{% static 'images/leaf smut.png' %}" width="50%"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Brown spot</td>
+                                    <td>{{ tbrown }}</td>
+                                    <td>{{ vbrown }}</td>
+                                    <td>{{ tebrown }}</td>
+                                    <td><img src="{% static 'images/brown spot.png' %}" width="50%"></td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Bacterial leaf blight</td>
+                                    <td>{{ tbacterial }}</td>
+                                    <td>{{ vbacterial }}</td>
+                                    <td>{{ tebacterial }}</td>
+                                    <td><img src="{% static 'images/leaf blight.png' %}" width="50%"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <!-- Main row -->
+        <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+</div>
+<script>
+    $('#fileupload').submit(function (evnt) {
+        if ($('#name').val().length <= 0) {
+            $('#name').attr('style', 'border-color:red');
+            evnt.preventDefault();
+        }
+        if ($('#content').val().length <= 0) {
+            $('#content').attr('style', 'border-color:red');
+            evnt.preventDefault();
+        }
+    });
+
+</script>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h1 class="text-center"><b>
+                            Paddy Deseases Classification App
+                        </b></h1>
+                        <h6 class="text-center mt-2">Build with Django, CNN and Dense201</h6>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="container-fluid">
+                        <div class="mb-3">
+                            <form action="desease" id="fileupload" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <!-- <label for="formFile" class="form-label">Default file input example</label> -->
+                                <div class="col-md-4 col-sm-4"><label for="fname">Upload Image File Here:</label>
+                                </div> <input name="filePath" type="file"><br><br>
+                                <br>
+                                <!-- <input type="file" name="original" style="display: none;" value="{{ file_url }}"> -->
+                                <button type="submit" class="btn btn-primary" value="submit">Predict</button>
+                            </form>
+                        </div>
+                    </div>
+                    <h6 class="my-4">Original Image</h6>
+                    <div class="row">
+                        <img src="{{filePathName}}" alt ='imagename' width="50%">
+                        
+                        
+                    </div>
+                    <br>
+                    <!-- <h6 class="my-4">Classification</h6> -->
+                    <div class="row">
+
+                    <img src="/media/img.png" alt =''>
+                    </div>
+                    <h2>The Classification of the image is : {{ predictedLabel }}</h2>
+                    <h2>accuracy : {{ accuracy }}</h2>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <!-- Main row -->
+        <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+</div>
+<script>
+    $('#fileupload').submit(function (evnt) {
+        if ($('#name').val().length <= 0) {
+            $('#name').attr('style', 'border-color:red');
+            evnt.preventDefault();
+        }
+        if ($('#content').val().length <= 0) {
+            $('#content').attr('style', 'border-color:red');
+            evnt.preventDefault();
+        }
+    });
+
+</script>
+{% endblock %}
