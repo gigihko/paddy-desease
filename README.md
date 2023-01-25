@@ -4,7 +4,8 @@
 
 klasifikasi penyakit padi
 tiga kelas
-pake transfer learning DenseNet201klasifikasi penyakit padi
+pake transfer learning DenseNet201
+klasifikasi penyakit padi
 tiga kelas
 pake transfer learning DenseNet201
 
