@@ -112,15 +112,16 @@ tensorflow_intel==2.11.0
 
 ## 📸 Preview
 
-_Screenshots or demo GIF can be added here_
+![Paddy Desease Classification Web](https://github.com/user-attachments/assets/2371a3a1-df3b-4db8-a9d9-e9a674c9dfdc)
+
 
 ---
 
 ## 📬 Contact
 
 For any questions or collaborations, feel free to reach out:
-- ✉️ Email: your@email.com
-- 📂 GitHub: [your-username](https://github.com/your-username)
+- ✉️ Email: gigihko99@gmail.com
+- 📂 GitHub: [gigihko](https://github.com/gigihko)
 
 ---
 
